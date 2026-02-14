@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compose - Sendly</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card card-wide">
+        <h1>Compose Your Message</h1>
+        <p class="subtitle">Fill in the details below</p>
+
+        <form>
+
+            <div class="form-group">
+                <label>Sender Name</label>
+                <input type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Recipient Email</label>
+                <input type="email" placeholder="recipient@example.com">
+            </div>
+
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" placeholder="Enter subject">
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea rows="6" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <a href="success.html">
+                <button type="button" class="btn">Send Message</button>
+            </a>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+© 2026 Sendly. All rights reserved.
+</footer>
+
+</body>
+</html>

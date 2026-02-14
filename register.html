@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register - Sendly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <center>
+
+        <div class="container">
+            <div class="card">
+                <h1>Create Your Sendly Account</h1>
+                <p class="subtitle">Automate your communication with confidence</p>
+
+                <form method="POST">
+
+                    <div class="form-group">
+                        <label>Name </label>
+                        <input  type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" name="mobile">
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="username">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="email" name="email">
+                    </div>
+<!--
+                    <div class="form-group">
+                        <label>OTP</label>
+                        <input type="text" name="otp">
+                    </div>
+                -->
+                    <button class="btn">Register</button>
+                </form>
+                <p class="subtitle" style="margin-top:20px;">
+                Existing user? <a href="{{ url_for('login') }}">Login here</a>
+            </p>
+            </div>
+        </div>
+
+        <footer>
+            © 2026 Sendly. All rights reserved.
+        </footer>
+
+    </center>
+
+</body>
+
+</html>

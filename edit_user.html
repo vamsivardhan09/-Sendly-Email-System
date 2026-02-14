@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit User - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>Edit User</h1>
+
+        <form method="POST">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" value="{{ user[1] }}" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" value="{{ user[2] }}" required>
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" value="{{ user[3] }}" required>
+            </div>
+
+            <button type="submit" class="btn">Update User</button>
+
+        </form>
+
+        <div style="margin-top:20px;">
+            <a href="{{ url_for('admin_dashboard') }}">Back</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

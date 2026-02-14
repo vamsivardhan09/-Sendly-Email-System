@@ -1,0 +1,235 @@
+/* ================================
+   RESET
+================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   ROOT DESIGN SYSTEM
+================================ */
+:root {
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --accent: #60a5fa;
+    --bg-gradient: linear-gradient(135deg, #f8fbff 0%, #eef4ff 50%, #e6efff 100%);
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --border-light: #e2e8f0;
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --transition: all 0.25s ease;
+}
+
+/* ================================
+   BODY
+================================ */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* ================================
+   LAYOUT
+================================ */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* ================================
+   CARD (Premium Look)
+================================ */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px);
+    padding: 50px 45px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.04),
+        0 20px 60px rgba(37, 99, 235, 0.08);
+    transition: var(--transition);
+}
+
+.card-wide {
+    max-width: 900px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* ================================
+   HEADINGS
+================================ */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+/* ================================
+   FORM
+================================ */
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    font-size: 14px;
+    background: #ffffff;
+    transition: var(--transition);
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ================================
+   BUTTON
+================================ */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--primary-light)
+    );
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ================================
+   TWO COLUMN LAYOUT
+================================ */
+.row {
+    display: flex;
+    gap: 25px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+    text-align: center;
+    max-width: 750px;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+/* ================================
+   LINKS
+================================ */
+a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+    background: #ffffff;
+    border-top: 1px solid var(--border-light);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .card {
+        padding: 40px 25px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+}

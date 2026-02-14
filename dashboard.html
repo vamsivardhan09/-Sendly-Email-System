@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Sendly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="hero">
+        <h1>Who would you like to send a message to today?</h1>
+        <p>
+            Sendly helps you automate and manage your email communication 
+            efficiently and securely.
+        </p>
+        <a href="{{ url_for('compose') }}">
+            <button class="btn" style="width:200px;">Start Sending</button>
+        </a>
+    </div>
+</div>
+
+<footer>
+© 2026 Sendly. All rights reserved.
+</footer>
+
+</body>
+</html>

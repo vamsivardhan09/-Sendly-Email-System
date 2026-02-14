@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success - Sendly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>Message Sent Successfully!</h1>
+        <p class="subtitle">
+            Your email has been delivered.
+        </p>
+
+        <div style="margin-top:30px; display:flex; gap:15px; justify-content:center;">
+
+            <a href="{{ url_for('dashboard') }}">
+                <button class="btn" style="width:180px;">
+                    Go to Dashboard
+                </button>
+            </a>
+
+            <a href="{{ url_for('logout') }}">
+                <button class="btn" style="width:180px; background: #ef4444;">
+                    Logout
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+<footer>
+© 2026 Sendly. All rights reserved.
+</footer>
+
+</body>
+</html>
